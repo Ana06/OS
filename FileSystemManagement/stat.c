@@ -17,13 +17,14 @@ int main(int argc, char** argv){
 	printf("Major: %i\n", major(buf.st_dev));
 	printf("Minor: %i\n", minor(buf.st_dev));
 	printf("I-nodo: %i\n", buf.st_ino);
-	printf("Tipo de archivo: ");
+	printf("file type: ");
 	if (S_ISLNK(buf.st_mode))
-		printf("enlace simbólico\n");
+		printf("symbolic link\n");
 	else if(S_ISREG(buf.st_mode))
-		printf("fichero regular\n");
+		printf("regular file\n");
 	else if(S_ISDIR(buf.st_mode))
-		printf("directorio\n");
-	printf("Accedido por última vez: %s\n", ctime(&(buf.st_mtime)));
-	//st_mtime:modificado por llamadas write, mknod, utime. No en cambio de usuario,grupo,permisos. st_ctime: modificado si se altera la información del inodo.
+		printf("directory\n");
+	printf("Last time accessed: %s\n", ctime(&(buf.st_mtime)));
+	//st_mtime: when it is modified by write, mknod or utime calls, not when changing user, group or ppermission. 
+	//st_ctime: when the i-node information is modified.
 }

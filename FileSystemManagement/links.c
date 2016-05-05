@@ -14,7 +14,7 @@ int main(int argc, char** argv){
 		return -1;
 	}
 	if(!S_ISREG(buf.st_mode)){
-		printf("No es un fichero regular");
+		printf("It is not a regular file");
 		return -1;
 	}
 	char* newsym = malloc(sizeof(char) * strlen(path) +5);
