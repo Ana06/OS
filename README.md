@@ -1,6 +1,7 @@
 # OS
 
- Design and implementation of applications based on OS services.
+Design and implementation of applications based on OS services. This project was developed during a university course (Advanced topics in operating systems and networks) in 2016.
+ 
  
  
 ## Process management and signaling 
@@ -11,6 +12,17 @@
 Shows the scheduling policy, the scheduling priority, the priority maximum value and the priority minimum value.
 
  
+### ps.c
+
+Shows the ids (id, group id and session id) of the process, the maximun number of files that the process can open and the actual directory.
+
+
+### demon.c
+
+Normally a demon has its own session an group. To ensure that it is possible to create it, a fork is done. This is a demon template, where the process attributes are showed (similar to how it is done in **ps.c**) and the work directory is set to */tmp*.
+
+
+
 ## File system management 
 
 
@@ -37,6 +49,7 @@ Checks and prints the state of a file lock. If it is unlocked a write lock is se
 ### ls.c
 
 Advanced ls.
+
 
 
 ## Licence
