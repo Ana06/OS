@@ -32,6 +32,25 @@ Executes any program as a demon and redirects the terminal outputs.
 Execute a shell with a FIFO scheduler policy with the priority given as an argument. If it is not given the maximum priority is set.
 
 
+### super-shell.c
+
+Execute a shell with a FIFO scheduler policy with the priority given as an argument. If it is not given the maximum priority is set.
+
+
+### block-signal.c
+
+Blocks the SIGINT and SIGTSTP signals and then sleep for a number of seconds given by the settings variable SLEEP_SECS. When it wakes up, informs if the SIGNT or/and SIGTSTP signals where received. After that the signals are unblocked and a  good-bye message displayed (if SIGTSTP was received as it has been unblicked the message will not be displayed).
+
+
+### count-signal.c
+
+Installs a handler of SIGINT and SIGTSTP signal. The program keeps in a while until ten SIGINT or SIGTSTP signals are received. Ater that it shows the numbers of signal of each type received and finishes.
+
+
+### self-destruction.c
+
+The program self-destruct (delete its executable file) after a number of seconds given as an argument. The self-destruction can be stoped by sending the SIGUSR1 signal.
+
 
 ## File system management 
 
