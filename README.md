@@ -3,6 +3,14 @@
  Design and implementation of applications based on OS services.
  
  
+## Process management and signaling 
+
+
+### chrt.c
+
+Shows the scheduling policy, the scheduling priority, the priority maximum value and the priority minimum value.
+
+ 
 ## File system management 
 
 
