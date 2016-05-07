@@ -22,6 +22,16 @@ Shows the ids (id, group id and session id) of the process, the maximun number o
 Normally a demon has its own session an group. To ensure that it is possible to create it, a fork is done. This is a demon template, where the process attributes are showed (similar to how it is done in **ps.c**) and the work directory is set to */tmp*.
 
 
+### demonize.c
+
+Executes any program as a demon and redirects the terminal outputs.
+
+
+### super-shell.c
+
+Execute a shell with a FIFO scheduler policy with the priority given as an argument. If it is not given the maximum priority is set.
+
+
 
 ## File system management 
 
