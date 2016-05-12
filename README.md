@@ -9,7 +9,13 @@ Design and implementation of applications based on OS services. This project was
 
 ### pipe-name.c
 
-Open the pipe *$HOME/tuberia* in write only mode and write in it the first argument of the program.
+Opens the pipe *$HOME/tuberia* in write only mode and writes in it the first argument of the program.
+
+
+## multiple-pipes.c
+
+Creates two pipes with name and wait until there is data to read in any of them. Then it writes the name of the pipe it read from and the data read.
+
 
 
 ## Process management and signaling 
