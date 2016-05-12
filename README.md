@@ -4,6 +4,14 @@ Design and implementation of applications based on OS services. This project was
  
  
  
+## Pipes
+
+
+### pipe-name.c
+
+Open the pipe *$HOME/tuberia* in write only mode and write in it the first argument of the program.
+
+
 ## Process management and signaling 
 
 
