@@ -9,12 +9,24 @@ Design and implementation of applications based on OS services. This project was
 
 ### pipe-name.c
 
-Opens the pipe *$HOME/tuberia* in write only mode and writes in it the first argument of the program.
+Opens the pipe with name *$HOME/tuberia* in write only mode and writes in it the first argument of the program.
 
 
 ## multiple-pipes.c
 
 Creates two pipes with name and wait until there is data to read in any of them. Then it writes the name of the pipe it read from and the data read.
+
+
+## two-commands-shell.c
+
+
+Emulates the behaviour of a shell in th execution of *command1 argument1 | command2 argument2*. It opens a pipe without name and creates a child. The parent executes *command1 argument1* and redirects the standar output to the write end of the pipe. The child executes *command2 argument2* and redirects the standar input to the read end of the pipe.
+
+
+## full-duplex.c
+
+
+Full-duplex communication using two pipes without name (*p_h* and *h_p*). The parent reads from standar input and send the message to his child using *p_h* pipe and freezes until the child answers. The child reads from *p_h*, writes the message received and wait a second. After that he sends his parent an *l* using *h_p* pipe to indicate that he is ready to receive more messages. After having received ten messages he sends a *q* to his parent to order him to finish.
 
 
 
