@@ -107,6 +107,12 @@ Advanced ls.
 
 
 
+## Authors
+
+This project was developed by Ana María Martínez Gómez.
+
+
+
 ## Licence
 
 Code published under MIT license (see [LICENSE](LICENSE)).
