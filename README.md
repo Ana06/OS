@@ -4,6 +4,36 @@ Design and implementation of applications based on OS services. This project was
  
  
  
+## Sockets
+
+### addresses.c
+
+Gets all the possible address which could be used to create a socket linked to a host given by the first argument. To every address it shows the numeric IP, the family and the socket type.
+
+
+### serverUDP-time.c
+
+An UDP server. The first argument is the address and the second one the port. The address can be in any format and it works with IPv4 and IPv6.
+The server will receive a character: *t*, *d* or *q*. If it receives *t* it will return the hora, with *d* it will return the date and with *q* it will finish. With every message it also writes a message with the name and port of the client.
+It can also receive messages from the console, reading two characters, where the second one is *\n*.
+
+
+### clientUDP-time.c
+
+An UDP cliente for the previous server, similar to the command *nc*. Its first argument is the address of the server, the second the port of the server and the third the character to be sent to the server.
+
+
+### serverTCP-echo.c
+
+A TCP server which listen in a given port and address (IPv4 or IPv6). When it recevies a connection, it shows the address and the port of the client. From that momment on it will send to the client everything it receives from it. It accept simultaneous connections, each of them is processed in a diferent child and none of them will get zombie.
+
+
+### clientTCP-echo.c
+
+An UDP cliente for the previous server. Its first argument is the address of the server and the second its port. Once the connection is established, the client will print in the console the server answer. When *Q* is written, the client closes the connection.
+
+
+
 ## Pipes
 
 
